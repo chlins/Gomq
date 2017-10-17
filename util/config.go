@@ -20,7 +20,7 @@ type Config struct {
 
 // GetConfig get the configuration from config flle
 func GetConfig() Config {
-	file, err := os.Open("/home/cy/go/src/github.com/zcytop/Gomq/config.json")
+	file, err := os.Open("config.json")
 	decoder := json.NewDecoder(file)
 	if err != nil {
 		log.Fatal("Config file error, ", err)
