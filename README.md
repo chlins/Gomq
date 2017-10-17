@@ -13,14 +13,14 @@
 
 1. `go run main.go` 
 
-   ![main](.\images\main.png)
+![main](./images/main.png)
 
 2. `cd Examples && go run udpProducer.go`
 
-![udp](.\images\udp.png)
+![udp](./images/udp.png)
 
-![msg](.\images\msg.png)
+![msg](./images/msg.png)
 
 3. `Open web browser http://localhost:8088/testTopic`
 
-![http](.\images\http.png)
+![http](./images/http.png)
