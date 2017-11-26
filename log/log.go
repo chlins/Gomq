@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-//颜色常量
+//color
 const (
 	RED = uint8(iota + 91)
 	GREEN
