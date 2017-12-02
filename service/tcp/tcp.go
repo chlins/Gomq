@@ -63,6 +63,11 @@ func (s *Service) handle(conn net.Conn) {
 			mq := channel.NewMq(reg.Cap)
 			channel.AddMq(reg.Topic, mq)
 			for {
+				if s.mq.Full(reg.Topic) {
+					conn.Write([]byte("Channel is up to cap limit"))
+					conn.Close()
+					return
+				}
 				n, _ := conn.Read(buf)
 				s.mq.Push(reg.Topic, string(buf[:n]))
 			}

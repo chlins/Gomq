@@ -72,3 +72,8 @@ func (m *MqC) Pop(t string) string {
 func (m *MqC) Empty(t string) bool {
 	return len(m.group[t].MsgQueue) == 0
 }
+
+// Full check channel full
+func (m *MqC) Full(t string) bool {
+	return len(m.group[t].MsgQueue) == m.group[t].Cap
+}
