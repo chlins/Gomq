@@ -1,4 +1,7 @@
 ### Simple message queue 
+
+[![Build Status](https://travis-ci.org/chlins/Gomq.svg?branch=master)](https://travis-ci.org/chlins/Gomq)
+
 #### Features 
 * Simple and easy using.
 * Provide message mode pub/sub via topic.
