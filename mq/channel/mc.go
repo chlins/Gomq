@@ -70,7 +70,10 @@ func (m *MqC) Pop(t string) string {
 
 // Empty check empty
 func (m *MqC) Empty(t string) bool {
-	return len(m.group[t].MsgQueue) == 0
+	if _, found := m.group[t]; found {
+		return len(m.group[t].MsgQueue) == 0
+	}
+	return false
 }
 
 // Full check channel full
